@@ -12,15 +12,44 @@
   src: url(../public/Brooklyn.otf);
 }
 
-body {
-  background-color: #121212;
+:root {
+  --myHeight: 100%;
+  --myWidth: 100%;
 }
 
-.text-white {
+body {
+  background-color: #121212;
   color: #fff;
   font-family: Akira;
 }
 
+.about-reveal::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: var(--myHeight);
+  top: 0;
+  background-color: #080808;
+}
+
+.reveal-left::after {
+  content: "";
+  position: absolute;
+  width: var(--myWidth);
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.reveal-top {
+  transform: translateY(70px);
+}
+
 .font-brooklyn {
   font-family: Brooklyn;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px #d6d3d1;
 }
