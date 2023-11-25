@@ -9,7 +9,7 @@ import { useRef, useLayoutEffect } from "react";
 import { gsap, Power2 } from "gsap";
 
 const About = () => {
-  const main = useRef(null);
+  const el = useRef(null);
   const tl = useRef<gsap.core.Timeline | null>(null);
 
   useLayoutEffect(() => {
@@ -29,13 +29,23 @@ const About = () => {
           translateY: 0,
           ease: Power2.easeInOut,
           delay: -0.7,
+        })
+        .from(".img-reveal", 1, {
+          width: 0,
+          ease: Power2.easeInOut,
+          delay: -1.1,
+        })
+        .from(".para-reveal", 1, {
+          opacity: 0,
+          ease: Power2.easeInOut,
+          delay: -0.7,
         });
-    }, main);
+    }, el);
 
     return () => ctx.revert();
   }, []);
   return (
-    <main ref={main}>
+    <main ref={el}>
       <div className="py-28 relative h-screen about-reveal">
         <div className="flex justify-between px-28">
           <div>
@@ -47,19 +57,19 @@ const About = () => {
                 FULLSTACK DEVELOPER
               </h2>
             </div>
-            <p className="text-sm font-brooklyn w-[35rem] opacity-70">
+            <p className="text-sm font-brooklyn w-[35rem] opacity-70 para-reveal">
               Exploring new technologies and applying them to projects and
               building scalable experiences for the web.Looking forward to build
               together!
             </p>
           </div>
-          <div>
+          <div className="w-[9.5rem] flex justify-center items-center">
             <Image
               width={150}
               height={150}
               src={salman}
               priority={true}
-              className="rounded-[50rem]"
+              className="rounded-[50rem] img-reveal"
               alt="salman image not found"
             />
           </div>

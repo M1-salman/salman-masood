@@ -21,6 +21,7 @@ body {
   background-color: #121212;
   color: #fff;
   font-family: Akira;
+  -webkit-font-smoothing: antialiased;
 }
 
 .about-reveal::after {
@@ -41,8 +42,32 @@ body {
   left: 0;
   background-color: #fff;
 }
+.reveal-left-2::after {
+  content: "";
+  position: absolute;
+  width: var(--myWidth);
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+.reveal-left-3::after {
+  content: "";
+  position: absolute;
+  width: var(--myWidth);
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
 
 .reveal-top {
+  transform: translateY(70px);
+}
+.reveal-top-2 {
+  transform: translateY(70px);
+}
+.reveal-top-3 {
   transform: translateY(70px);
 }
 
