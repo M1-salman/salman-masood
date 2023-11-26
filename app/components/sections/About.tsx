@@ -20,12 +20,12 @@ const About = () => {
           "--myHeight": "0%",
           ease: Power2.easeInOut,
         })
-        .to(".reveal-left", 1, {
+        .to(".text-reveal-x", 1, {
           "--myWidth": "0%",
           ease: Power2.easeInOut,
           delay: -0.7,
         })
-        .to(".reveal-top", 1, {
+        .to(".text-reveal-y", 1, {
           translateY: 0,
           ease: Power2.easeInOut,
           delay: -0.7,
@@ -35,7 +35,7 @@ const About = () => {
           ease: Power2.easeInOut,
           delay: -1.1,
         })
-        .from(".para-reveal", 1, {
+        .from(".para-text-reveal", 1, {
           opacity: 0,
           ease: Power2.easeInOut,
           delay: -0.7,
@@ -49,15 +49,15 @@ const About = () => {
       <div className="py-28 relative h-screen about-reveal">
         <div className="flex justify-between px-28">
           <div>
-            <div className="overflow-hidden relative reveal-left">
-              <h1 className="text-7xl reveal-top">SALMAN MASOOD</h1>
+            <div className="overflow-hidden relative text-reveal-x">
+              <h1 className="text-7xl text-reveal-y">SALMAN MASOOD</h1>
             </div>
-            <div className="overflow-hidden my-2 relative reveal-left">
-              <h2 className="text-3xl text-red-500 inline-block reveal-top">
+            <div className="overflow-hidden my-2 relative text-reveal-x">
+              <h2 className="text-3xl text-red-500 inline-block text-reveal-y">
                 FULLSTACK DEVELOPER
               </h2>
             </div>
-            <p className="text-sm font-brooklyn w-[35rem] opacity-70 para-reveal">
+            <p className="text-[0.8rem] leading-[1.5rem] font-brooklyn w-[35rem] para-text-reveal">
               Exploring new technologies and applying them to projects and
               building scalable experiences for the web.Looking forward to build
               together!
@@ -75,8 +75,8 @@ const About = () => {
           </div>
         </div>
         <div className="flex justify-between items-end h-4/6 px-28">
-          <div className="overflow-hidden relative reveal-left">
-            <div className="flex reveal-top">
+          <div className="overflow-hidden relative text-reveal-x">
+            <div className="flex text-reveal-y">
               <a href="https://github.com/M1-salman" target="_blank">
                 <Image
                   src={github}
@@ -121,22 +121,22 @@ const About = () => {
               </a>
             </div>
           </div>
-          <div className="overflow-hidden relative reveal-left">
-            <div className="reveal-top">
+          <div className="overflow-hidden relative text-reveal-x">
+            <div className="text-reveal-y">
               <a
-                href="#"
-                className="ml-10 text-2xl text-stroke text-transparent"
-              >
-                Skills
-              </a>
-              <a
-                href="#"
+                href="#projects"
                 className="ml-10 text-2xl text-stroke text-transparent"
               >
                 Projects
               </a>
               <a
-                href="#"
+                href="#skills"
+                className="ml-10 text-2xl text-stroke text-transparent"
+              >
+                Skills
+              </a>
+              <a
+                href="#contact"
                 className="ml-10 text-2xl text-stroke text-transparent"
               >
                 Contact
