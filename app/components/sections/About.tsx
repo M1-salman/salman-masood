@@ -46,24 +46,26 @@ const About = () => {
   }, []);
   return (
     <main ref={el}>
-      <div className="py-28 relative h-screen about-reveal">
-        <div className="flex justify-between px-28">
+      <div className="pt-20 pb-28 md:py-28 relative h-screen max-w-full about-reveal">
+        <div className="flex flex-col-reverse md:flex-row justify-between px-6 sm:px-12 md:px-20 lg:px-28">
           <div>
             <div className="overflow-hidden relative text-reveal-x">
-              <h1 className="text-7xl text-reveal-y">SALMAN MASOOD</h1>
+              <h1 className="text-3xl sm:text-5xl lg:text-7xl text-reveal-y">
+                SALMAN MASOOD
+              </h1>
             </div>
             <div className="overflow-hidden my-2 relative text-reveal-x">
-              <h2 className="text-3xl text-red-500 inline-block text-reveal-y">
+              <h2 className="text-md sm:text-2xl lg:text-3xl text-red-500 inline-block text-reveal-y">
                 FULLSTACK DEVELOPER
               </h2>
             </div>
-            <p className="text-[0.8rem] leading-[1.5rem] font-brooklyn w-[35rem] para-text-reveal">
+            <p className="text-[0.8rem] leading-[1.5rem] font-brooklyn w-[20rem] sm:w-[35rem] para-text-reveal">
               Exploring new technologies and applying them to projects and
               building scalable experiences for the web.Looking forward to build
               together!
             </p>
           </div>
-          <div className="w-[9.5rem] flex justify-center items-center">
+          <div className="w-[6rem] h-[5.5rem] sm:w-[9.5rem] sm:h-[8.5rem] md:h-auto flex justify-center items-center mb-6 md:mb-0">
             <Image
               width={150}
               height={150}
@@ -74,8 +76,8 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="flex justify-between items-end h-4/6 px-28">
-          <div className="overflow-hidden relative text-reveal-x">
+        <div className="flex flex-col lg:flex-row justify-between lg:items-end h-3/6 md:h-4/6 px-6 sm:px-12 md:px-20 lg:px-28">
+          <div className="overflow-hidden relative text-reveal-x mt-6 lg:mt-0">
             <div className="flex text-reveal-y">
               <a href="https://github.com/M1-salman" target="_blank">
                 <Image
@@ -87,7 +89,7 @@ const About = () => {
                 />
               </a>
               <a
-                href="https://www.linkedin.com/in/salman-masood917/"
+                href="https://www.instagram.com/realsalmanmasood/"
                 target="_blank"
               >
                 <Image
@@ -99,7 +101,7 @@ const About = () => {
                 />
               </a>
               <a
-                href="https://www.instagram.com/realsalmanmasood/"
+                href="https://www.linkedin.com/in/salman-masood917/"
                 target="_blank"
               >
                 <Image
@@ -122,22 +124,22 @@ const About = () => {
             </div>
           </div>
           <div className="overflow-hidden relative text-reveal-x">
-            <div className="text-reveal-y">
+            <div className="text-reveal-y text-sm sm:text-2xl flex justify-between sm:block">
               <a
                 href="#projects"
-                className="ml-10 text-2xl text-stroke text-transparent"
+                className="lg:ml-10 text-stroke text-transparent"
               >
                 Projects
               </a>
               <a
                 href="#skills"
-                className="ml-10 text-2xl text-stroke text-transparent"
+                className="sm:ml-10 text-stroke text-transparent"
               >
                 Skills
               </a>
               <a
                 href="#contact"
-                className="ml-10 text-2xl text-stroke text-transparent"
+                className="sm:ml-10 text-stroke text-transparent"
               >
                 Contact
               </a>

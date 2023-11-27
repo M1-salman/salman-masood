@@ -19,7 +19,7 @@ const Project = () => {
       const tl = gsap
         .timeline({
           scrollTrigger: {
-            trigger: ".text-reveal-x",
+            trigger: ".reveal-img",
           },
         })
         .to(".text-reveal-x", 1, {
@@ -46,7 +46,7 @@ const Project = () => {
       const tl2 = gsap
         .timeline({
           scrollTrigger: {
-            trigger: ".text-reveal-x-2",
+            trigger: ".reveal-img-2",
           },
         })
         .to(".text-reveal-x-2", 1, {
@@ -73,7 +73,7 @@ const Project = () => {
       const tl3 = gsap
         .timeline({
           scrollTrigger: {
-            trigger: ".text-reveal-x-3",
+            trigger: ".reveal-img-3",
           },
         })
         .to(".text-reveal-x-3", 1, {
@@ -102,11 +102,17 @@ const Project = () => {
   }, []);
 
   return (
-    <section ref={el} className="p-28" id="projects">
+    <section
+      ref={el}
+      className="px-6 sm:px-12 md:px-20 lg:px-28 py-28 max-w-full"
+      id="projects"
+    >
       <div>
-        <h1 className="text-white text-center text-5xl">Projects</h1>
+        <h1 className="text-white text-center text-3xl sm:text-5xl">
+          Projects
+        </h1>
       </div>
-      <div className="my-16 flex">
+      <div className="my-16 flex flex-col items-center md:items-start md:flex-row">
         <div className="reveal-img relative overflow-hidden">
           <Image
             width={450}
@@ -117,14 +123,14 @@ const Project = () => {
             alt="Ecommerce not found"
           />
         </div>
-        <div className="ml-5">
+        <div className="ml-0 md:ml-5 flex flex-col-reverse items-center md:items-start md:block">
           <div className="flex">
             <div className="overflow-hidden relative text-reveal-x">
               <h1 className="text-red-500 text-reveal-y">
                 Built a Ecommerce platform
               </h1>
             </div>
-            <div className="overflow-hidden relative text-reveal-x ml-5 flex">
+            <div className="overflow-hidden relative text-reveal-x ml-5 flex items-center sm:items-start">
               <a target="_blank" href="https://github.com/M1-salman/Ecommerce">
                 <Image
                   src={github}
@@ -139,33 +145,25 @@ const Project = () => {
                   src={arrow}
                   width={22}
                   height={22}
-                  className="invert opacity-90 text-reveal-y"
+                  className="invert opacity-90 text-reveal-y w-7 sm:w-auto"
                   alt="arrow img not found"
                 />
               </a>
             </div>
           </div>
-          <ul className="font-brooklyn text-[0.8rem] leading-[2rem] text-reveal-ul">
-            <li>
+          <div className="font-brooklyn text-[0.8rem] leading-[2rem] text-reveal-ul w-[20rem] text-center md:text-start sm:w-[30rem] lg:w-[40rem] my-12 md:my-0">
+            <p>
               Streamlined product management using Sanity CMS, making updates
-              and modifications effortless.
-            </li>
-            <li>
-              Credential-based authentication through MongoDB and Google SignIn
-              with OAuth 2.0 using NextAuth.
-            </li>
-            <li>
-              An efficient "Add to Cart" feature utilizing Redux Toolkit for
-              seamless user experience.
-            </li>
-            <li>
-              A contact page that securely transmitted data to a MongoDB
-              database.
-            </li>
-          </ul>
+              and modifications effortless. Credential-based authentication
+              through MongoDB and Google SignIn with OAuth 2.0 using NextAuth.
+              An efficient &quot;Add to Cart&quot; feature utilizing Redux Toolkit for
+              seamless user experience. A contact page that securely transmitted
+              data to a MongoDB database.
+            </p>
+          </div>
         </div>
       </div>
-      <div className="my-16 flex flex-row-reverse justify-between">
+      <div className="my-16 flex  flex-col md:flex-row-reverse items-center md:items-start justify-between">
         <div className="reveal-img-2 relative overflow-hidden">
           <Image
             width={450}
@@ -176,14 +174,14 @@ const Project = () => {
             alt="videocall img not found"
           />
         </div>
-        <div>
+        <div className="flex flex-col-reverse items-center md:items-start md:block">
           <div className="flex">
             <div className="overflow-hidden relative text-reveal-x-2">
               <h1 className="text-red-500 text-reveal-y-2">
                 video call without a server
               </h1>
             </div>
-            <div className="ml-5 overflow-hidden relative text-reveal-x-2 flex">
+            <div className="ml-5 overflow-hidden relative text-reveal-x-2 flex items-center sm:items-start">
               <a
                 target="_blank"
                 href="https://github.com/M1-salman/WebRTC-VideoCall"
@@ -204,33 +202,25 @@ const Project = () => {
                   src={arrow}
                   width={22}
                   height={22}
-                  className="invert opacity-90 text-reveal-y-2"
+                  className="invert opacity-90 text-reveal-y-2 w-7 sm:w-auto"
                   alt="arrow img not found"
                 />
               </a>
             </div>
           </div>
-          <ul className="font-brooklyn text-[0.8rem] leading-[2rem] text-reveal-ul-2">
-            <li>
+          <div className="font-brooklyn text-[0.8rem] leading-[2rem] text-reveal-ul-2 w-[20rem] text-center md:text-start sm:w-[30rem] lg:w-[40rem] my-12 md:my-0">
+            <p>
               Implemented WebRTC using Javascript to create a real-time
-              communication.
-            </li>
-            <li>
-              Exchanged their SDP as an offer or answer between them to create a
-              peer to peer connection.
-            </li>
-            <li>
-              After a successful negotiation of their SDP, they can share their
-              local stream with each other.
-            </li>
-            <li>
-              Established error handling in the event of user disconnection
-              using WebRTC data channel.
-            </li>
-          </ul>
+              communication. Exchanged their SDP as an offer or answer between
+              them to create a peer to peer connection. After a successful
+              negotiation of their SDP, they can share their local stream with
+              each other. Established error handling in the event of user
+              disconnection using WebRTC data channel.
+            </p>
+          </div>
         </div>
       </div>
-      <div className="my-16 flex">
+      <div className="my-16 flex flex-col items-center md:items-start md:flex-row">
         <div className="reveal-img-3 relative overflow-hidden">
           <Image
             width={450}
@@ -241,15 +231,15 @@ const Project = () => {
             alt="Ecommerce not found"
           />
         </div>
-        <div className="ml-5">
+        <div className="ml-0 md:ml-5 flex flex-col-reverse items-center md:items-start md:block">
           <div className="flex">
             <div className="overflow-hidden relative text-reveal-x-3">
               <h1 className="text-red-500 text-reveal-y-3">
                 File sharing in raw binary data
               </h1>
             </div>
-            <div className="ml-5 overflow-hidden relative text-reveal-x-3 flex">
-              <a target="_blank" href="https://github.com/M1-salman/Ecommerce">
+            <div className="ml-5 overflow-hidden relative text-reveal-x-3 flex items-center sm:items-start">
+              <a target="_blank" href="https://github.com/M1-salman/WebRTC-FileTransfer">
                 <Image
                   src={github}
                   width={22}
@@ -266,29 +256,22 @@ const Project = () => {
                   src={arrow}
                   width={22}
                   height={22}
-                  className="invert opacity-90 text-reveal-y-3"
+                  className="invert opacity-90 text-reveal-y-3 w-7 sm:w-auto"
                   alt="arrow img not found"
                 />
               </a>
             </div>
           </div>
-          <ul className="font-brooklyn text-[0.8rem] leading-[2rem] text-reveal-ul-3">
-            <li>
+          <div className="font-brooklyn text-[0.8rem] leading-[2rem] text-reveal-ul-3 w-[20rem] text-center md:text-start sm:w-[30rem] lg:w-[40rem] my-12 md:my-0">
+            <p>
               Implemented socket for signalling to create a WebRTC connection.
-            </li>
-            <li>
               Established a socket connection using the useMemo hook to improve
-              performance.
-            </li>
-            <li>
-              Automatic negotiation between each of them is done by clicking the
-              only connect button.
-            </li>
-            <li>
-              The selected file is transmitted via the WebRTC data channel as
-              raw binary data, which is converted using an ArrayBuffer.
-            </li>
-          </ul>
+              performance. Automatic negotiation between each of them is done by
+              clicking the only connect button. The selected file is transmitted
+              via the WebRTC data channel as raw binary data, which is converted
+              using an ArrayBuffer.
+            </p>
+          </div>
         </div>
       </div>
     </section>

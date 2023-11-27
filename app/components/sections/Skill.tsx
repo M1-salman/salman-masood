@@ -58,11 +58,15 @@ const Skill = () => {
     return () => ctx.revert();
   }, []);
   return (
-    <section ref={el} className="px-28" id="skills">
+    <section
+      ref={el}
+      className="px-6 sm:px-12 md:px-20 lg:px-28 max-w-full"
+      id="skills"
+    >
       <div>
-        <h1 className="text-5xl text-center leading-[6rem]">Skills</h1>
+        <h1 className="text-3xl sm:text-5xl text-center leading-[6rem]">Skills</h1>
       </div>
-      <div className="text-5xl text-center leading-[6rem]">
+      <div className="text-3xl sm:text-5xl text-center leading-[3rem] sm:leading-[6rem]">
         <div className="bg-red-500 overflow-hidden">
           <span className="text-translate-x inline-block">
             HTML CSS JAVASCRIPT TYPESCRIPT

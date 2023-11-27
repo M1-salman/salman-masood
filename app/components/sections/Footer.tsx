@@ -6,11 +6,11 @@ import x from "@/public/svg/X.svg";
 
 const Footer = () => {
   return (
-    <footer className="px-28 pt-28 pb-16">
+    <footer className="px-6 sm:px-12 md:px-20 lg:px-28 pt-28 pb-16">
       <span className="h-[0.5px] w-full bg-white inline-block"></span>
-      <div className="flex justify-between mt-16">
+      <div className="flex flex-col items-center lg:flex-row lg:justify-between mt-16">
         <div className="font-brooklyn">copyright@salmanmasood2023</div>
-        <div className="flex">
+        <div className="flex my-8 lg:my-0">
           <a href="https://github.com/M1-salman" target="_blank">
             <Image
               src={github}
@@ -20,10 +20,7 @@ const Footer = () => {
               alt="github svg not found"
             />
           </a>
-          <a
-            href="https://www.linkedin.com/in/salman-masood917/"
-            target="_blank"
-          >
+          <a href="https://www.instagram.com/realsalmanmasood/" target="_blank">
             <Image
               src={linkedin}
               width={23}
@@ -32,7 +29,10 @@ const Footer = () => {
               alt="github svg not found"
             />
           </a>
-          <a href="https://www.instagram.com/realsalmanmasood/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/salman-masood917/"
+            target="_blank"
+          >
             <Image
               src={instagram}
               width={25}
