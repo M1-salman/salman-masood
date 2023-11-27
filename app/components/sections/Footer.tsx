@@ -2,7 +2,7 @@ import Image from "next/image";
 import github from "@/public/svg/github.svg";
 import linkedin from "@/public/svg/instagram.svg";
 import instagram from "@/public/svg/linkedin.svg";
-import x from "@/public/svg/X.svg";
+import x from "@/public/svg/x.svg";
 
 const Footer = () => {
   return (

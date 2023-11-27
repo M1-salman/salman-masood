@@ -4,7 +4,7 @@ import github from "@/public/svg/github.svg";
 import linkedin from "@/public/svg/instagram.svg";
 import instagram from "@/public/svg/linkedin.svg";
 import salman from "@/public/img/salman.jpg";
-import x from "@/public/svg/X.svg";
+import x from "@/public/svg/x.svg";
 import { useRef, useLayoutEffect } from "react";
 import { gsap, Power2 } from "gsap";
 
