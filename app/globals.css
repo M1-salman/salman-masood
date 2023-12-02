@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define custom font faces */
 @font-face {
   font-family: Akira;
   src: url(../public/Akira.otf);
@@ -12,6 +13,7 @@
   src: url(../public/Brooklyn.otf);
 }
 
+/* These root variables will be used for controlling animations using the GSAP library. */
 :root {
   --myHeight: 100%;
   --myWidth: 100%;
@@ -28,6 +30,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Styling for the reveal effect on elements with the class .about-reveal */
 .about-reveal::after {
   content: "";
   position: absolute;
@@ -37,24 +40,9 @@ body {
   background-color: #080808;
 }
 
-.text-reveal-x::after {
-  content: "";
-  position: absolute;
-  width: var(--myWidth);
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-}
-.text-reveal-x-2::after {
-  content: "";
-  position: absolute;
-  width: var(--myWidth);
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-}
+/* Styling for the reveal effect on elements with the class .text-reveal-x */
+.text-reveal-x::after,
+.text-reveal-x-2::after,
 .text-reveal-x-3::after {
   content: "";
   position: absolute;
@@ -65,32 +53,16 @@ body {
   background-color: #fff;
 }
 
-.text-reveal-y {
-  transform: translateY(70px);
-}
-.text-reveal-y-2 {
-  transform: translateY(70px);
-}
+/* Transformations for elements with the class .text-reveal-y */
+.text-reveal-y,
+.text-reveal-y-2,
 .text-reveal-y-3 {
   transform: translateY(70px);
 }
 
-.reveal-img::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: var(--myHeight);
-  bottom: 0;
-  background-color: #121212;
-}
-.reveal-img-2::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: var(--myHeight);
-  bottom: 0;
-  background-color: #121212;
-}
+/* Styling for the reveal effect on elements with the class .reveal-img */
+.reveal-img::after,
+.reveal-img-2::after,
 .reveal-img-3::after {
   content: "";
   position: absolute;
@@ -100,14 +72,17 @@ body {
   background-color: #121212;
 }
 
+/* Custom font class */
 .font-brooklyn {
   font-family: Brooklyn;
 }
 
+/* Text stroke effect */
 .text-stroke {
   -webkit-text-stroke: 1px #d6d3d1;
 }
 
+/* Custom styling for input elements */
 .input-style {
   background-color: initial;
   border-bottom: 1px solid red;
