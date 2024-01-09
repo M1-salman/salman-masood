@@ -145,7 +145,7 @@ const Project = () => {
                   src={arrow}
                   width={22}
                   height={22}
-                  className="invert opacity-90 text-reveal-y w-7 sm:w-auto"
+                  className="invert opacity-90 text-reveal-y w-[1.8rem] sm:w-[22px]"
                   alt="arrow img not found"
                 />
               </a>
@@ -156,9 +156,9 @@ const Project = () => {
               Streamlined product management using Sanity CMS, making updates
               and modifications effortless. Credential-based authentication
               through MongoDB and Google SignIn with OAuth 2.0 using NextAuth.
-              An efficient &quot;Add to Cart&quot; feature utilizing Redux Toolkit for
-              seamless user experience. A contact page that securely transmitted
-              data to a MongoDB database.
+              An efficient &quot;Add to Cart&quot; feature utilizing Redux
+              Toolkit for seamless user experience. A contact page that securely
+              transmitted data to a MongoDB database.
             </p>
           </div>
         </div>
@@ -202,7 +202,7 @@ const Project = () => {
                   src={arrow}
                   width={22}
                   height={22}
-                  className="invert opacity-90 text-reveal-y-2 w-7 sm:w-auto"
+                  className="invert opacity-90 text-reveal-y-2 w-[1.8rem] sm:w-[22px]"
                   alt="arrow img not found"
                 />
               </a>
@@ -239,7 +239,10 @@ const Project = () => {
               </h1>
             </div>
             <div className="ml-5 overflow-hidden relative text-reveal-x-3 flex items-center sm:items-start">
-              <a target="_blank" href="https://github.com/M1-salman/WebRTC-FileTransfer">
+              <a
+                target="_blank"
+                href="https://github.com/M1-salman/WebRTC-FileTransfer"
+              >
                 <Image
                   src={github}
                   width={22}
@@ -256,7 +259,7 @@ const Project = () => {
                   src={arrow}
                   width={22}
                   height={22}
-                  className="invert opacity-90 text-reveal-y-3 w-7 sm:w-auto"
+                  className="invert opacity-90 text-reveal-y-3 w-[1.8rem] sm:w-[22px]"
                   alt="arrow img not found"
                 />
               </a>
