@@ -13,13 +13,18 @@
   src: url(../public/Brooklyn.otf);
 }
 
+@font-face {
+  font-family: Cal Sans;
+  src: url(../public/CalSans-SemiBold.otf);
+}
+
 /* These root variables will be used for controlling animations using the GSAP library. */
 :root {
   --myHeight: 100%;
   --myWidth: 100%;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -75,6 +80,10 @@ body {
 /* Custom font class */
 .font-brooklyn {
   font-family: Brooklyn;
+}
+
+.font-cal-sans {
+  font-family: Cal Sans;
 }
 
 /* Text stroke effect */
