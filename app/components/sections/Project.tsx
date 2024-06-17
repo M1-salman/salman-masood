@@ -1,284 +1,160 @@
 "use client";
+import React from "react";
 import Image from "next/image";
-import ecommerce from "@/public/img/ecommerce.png";
-import github from "@/public/svg/github.svg";
-import arrow from "@/public/img/arrow.png";
-import videocall from "@/public/img/videocall.png";
-import filesharing from "@/public/img/filesharing.png";
-import { useRef, useLayoutEffect } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { gsap, Power2 } from "gsap";
+import { TracingBeam } from "../ui/tracing-beam";
 
-const Project = () => {
-  const el = useRef(null);
-
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    let ctx = gsap.context(() => {
-      const tl = gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".reveal-img",
-          },
-        })
-        .to(".text-reveal-x", 1, {
-          "--myWidth": "0%",
-          ease: Power2.easeInOut,
-        })
-        .to(".text-reveal-y", 1, {
-          translateY: 0,
-          ease: Power2.easeInOut,
-          delay: -1,
-        })
-        .from(".text-reveal-ul", 1, {
-          opacity: 0,
-          ease: Power2.easeInOut,
-          delay: -0.8,
-        })
-        .to(".reveal-img", 1, {
-          "--myHeight": "0%",
-          ease: Power2.easeInOut,
-          delay: -1,
-        })
-        .from(".scale", 1, { scale: 1.3, ease: Power2.easeInOut, delay: -1 });
-
-      const tl2 = gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".reveal-img-2",
-          },
-        })
-        .to(".text-reveal-x-2", 1, {
-          "--myWidth": "0%",
-          ease: Power2.easeInOut,
-        })
-        .to(".text-reveal-y-2", 1, {
-          translateY: 0,
-          ease: Power2.easeInOut,
-          delay: -1,
-        })
-        .from(".text-reveal-ul-2", 1, {
-          opacity: 0,
-          ease: Power2.easeInOut,
-          delay: -0.8,
-        })
-        .to(".reveal-img-2", 1, {
-          "--myHeight": "0%",
-          ease: Power2.easeInOut,
-          delay: -1,
-        })
-        .from(".scale-2", 1, { scale: 1.3, ease: Power2.easeInOut, delay: -1 });
-
-      const tl3 = gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".reveal-img-3",
-          },
-        })
-        .to(".text-reveal-x-3", 1, {
-          "--myWidth": "0%",
-          ease: Power2.easeInOut,
-        })
-        .to(".text-reveal-y-3", 1, {
-          translateY: 0,
-          ease: Power2.easeInOut,
-          delay: -1,
-        })
-        .from(".text-reveal-ul-3", 1, {
-          opacity: 0,
-          ease: Power2.easeInOut,
-          delay: -0.8,
-        })
-        .to(".reveal-img-3", 1, {
-          "--myHeight": "0%",
-          ease: Power2.easeInOut,
-          delay: -1,
-        })
-        .from(".scale-3", 1, { scale: 1.3, ease: Power2.easeInOut, delay: -1 });
-    }, el);
-
-    return () => ctx.revert();
-  }, []);
-
+export function Project() {
   return (
-    <section
-      ref={el}
-      className="px-6 sm:px-12 md:px-20 lg:px-28 py-28 max-w-full"
-      id="projects"
-    >
-      <div>
-        <h1 className="text-white text-center text-3xl sm:text-5xl">
-          Projects
-        </h1>
-      </div>
-      <div className="my-16 flex flex-col items-center md:items-start md:flex-row">
-        <div className="reveal-img relative overflow-hidden">
-          <Image
-            width={450}
-            height={500}
-            src={ecommerce}
-            priority={true}
-            className="rounded-xl scale"
-            alt="Ecommerce not found"
-          />
-        </div>
-        <div className="ml-0 md:ml-5 flex flex-col-reverse items-center md:items-start md:block">
-          <div className="flex">
-            <div className="overflow-hidden relative text-reveal-x">
-              <h1 className="text-red-500 text-reveal-y">
-                Built a Ecommerce platform
-              </h1>
+    <section className="max-w-full" id="projects">
+      <h1 className="text-3xl sm:text-5xl text-center mb-12 leading-[6rem]">
+        Projects
+      </h1>
+      <TracingBeam className="px-6">
+        <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+          {/* map for project content */}
+          {projectContent.map((item, index) => (
+            <div key={`content-${index}`} className="mb-10 md:ml-0 ml-4">
+              {/* map for project content - badges */}
+              {item.badges.map((badge, badgeIndex) => (
+                <a
+                  key={badgeIndex}
+                  target="_blank"
+                  href={badge.link}
+                  className="inline-block mr-4"
+                >
+                  <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4 transition-colors duration-200 hover:bg-gray-700">
+                    {badge.title}
+                  </h2>
+                </a>
+              ))}
+              <p className={"text-red-500 text-xl mb-4"}>{item.title}</p>
+              <div className="text-sm  prose prose-sm dark:prose-invert font-cal-sans">
+                {item?.image && (
+                  <Image
+                    src={item.image}
+                    alt="blog thumbnail"
+                    height="1000"
+                    width="1000"
+                    className="rounded-lg mb-10 object-cover"
+                  />
+                )}
+                {item.description}
+              </div>
             </div>
-            <div className="overflow-hidden relative text-reveal-x ml-5 flex items-center sm:items-start">
-              <a target="_blank" href="https://github.com/M1-salman/Ecommerce">
-                <Image
-                  src={github}
-                  width={22}
-                  height={22}
-                  className="invert mr-5 opacity-90 text-reveal-y"
-                  alt="github svg not found"
-                />
-              </a>
-              <a target="_blank" href="https://ecommerce-m1-salman.vercel.app/">
-                <Image
-                  src={arrow}
-                  width={22}
-                  height={22}
-                  className="invert opacity-90 text-reveal-y w-[1.8rem] sm:w-[22px]"
-                  alt="arrow img not found"
-                />
-              </a>
-            </div>
-          </div>
-          <div className="font-brooklyn text-[0.8rem] leading-[2rem] text-reveal-ul w-[20rem] text-center md:text-start sm:w-[30rem] lg:w-[40rem] my-12 md:my-0">
-            <p>
-              Streamlined product management using Sanity CMS, making updates
-              and modifications effortless. Credential-based authentication
-              through MongoDB and Google SignIn with OAuth 2.0 using NextAuth.
-              An efficient &quot;Add to Cart&quot; feature utilizing Redux
-              Toolkit for seamless user experience. A contact page that securely
-              transmitted data to a MongoDB database.
-            </p>
-          </div>
+          ))}
         </div>
-      </div>
-      <div className="my-16 flex  flex-col md:flex-row-reverse items-center md:items-start justify-between">
-        <div className="reveal-img-2 relative overflow-hidden">
-          <Image
-            width={450}
-            height={500}
-            src={videocall}
-            priority={true}
-            className="rounded-xl scale-2"
-            alt="videocall img not found"
-          />
-        </div>
-        <div className="flex flex-col-reverse items-center md:items-start md:block">
-          <div className="flex">
-            <div className="overflow-hidden relative text-reveal-x-2">
-              <h1 className="text-red-500 text-reveal-y-2">
-                video call without a server
-              </h1>
-            </div>
-            <div className="ml-5 overflow-hidden relative text-reveal-x-2 flex items-center sm:items-start">
-              <a
-                target="_blank"
-                href="https://github.com/M1-salman/WebRTC-VideoCall"
-              >
-                <Image
-                  src={github}
-                  width={22}
-                  height={22}
-                  className="invert mr-5 opacity-90 text-reveal-y-2"
-                  alt="github svg not found"
-                />
-              </a>
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/posts/salman-masood917_softwaredevelopment-videocall-webrtc-activity-7130472230764883968-BNIR?utm_source=share&utm_medium=member_desky"
-              >
-                <Image
-                  src={arrow}
-                  width={22}
-                  height={22}
-                  className="invert opacity-90 text-reveal-y-2 w-[1.8rem] sm:w-[22px]"
-                  alt="arrow img not found"
-                />
-              </a>
-            </div>
-          </div>
-          <div className="font-brooklyn text-[0.8rem] leading-[2rem] text-reveal-ul-2 w-[20rem] text-center md:text-start sm:w-[30rem] lg:w-[40rem] my-12 md:my-0">
-            <p>
-              Implemented WebRTC using Javascript to create a real-time
-              communication. Exchanged their SDP as an offer or answer between
-              them to create a peer to peer connection. After a successful
-              negotiation of their SDP, they can share their local stream with
-              each other. Established error handling in the event of user
-              disconnection using WebRTC data channel.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="my-16 flex flex-col items-center md:items-start md:flex-row">
-        <div className="reveal-img-3 relative overflow-hidden">
-          <Image
-            width={450}
-            height={500}
-            src={filesharing}
-            priority={true}
-            className="rounded-xl scale-3"
-            alt="Ecommerce not found"
-          />
-        </div>
-        <div className="ml-0 md:ml-5 flex flex-col-reverse items-center md:items-start md:block">
-          <div className="flex">
-            <div className="overflow-hidden relative text-reveal-x-3">
-              <h1 className="text-red-500 text-reveal-y-3">
-                File sharing in raw binary data
-              </h1>
-            </div>
-            <div className="ml-5 overflow-hidden relative text-reveal-x-3 flex items-center sm:items-start">
-              <a
-                target="_blank"
-                href="https://github.com/M1-salman/WebRTC-FileTransfer"
-              >
-                <Image
-                  src={github}
-                  width={22}
-                  height={22}
-                  className="invert mr-5 opacity-90 text-reveal-y-3"
-                  alt="github svg not found"
-                />
-              </a>
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/posts/salman-masood917_webdevelopment-fullstackdeveloper-backend-activity-7132426854451265536-B6kr?utm_source=share&utm_medium=member_desky"
-              >
-                <Image
-                  src={arrow}
-                  width={22}
-                  height={22}
-                  className="invert opacity-90 text-reveal-y-3 w-[1.8rem] sm:w-[22px]"
-                  alt="arrow img not found"
-                />
-              </a>
-            </div>
-          </div>
-          <div className="font-brooklyn text-[0.8rem] leading-[2rem] text-reveal-ul-3 w-[20rem] text-center md:text-start sm:w-[30rem] lg:w-[40rem] my-12 md:my-0">
-            <p>
-              Implemented socket for signalling to create a WebRTC connection.
-              Established a socket connection using the useMemo hook to improve
-              performance. Automatic negotiation between each of them is done by
-              clicking the only connect button. The selected file is transmitted
-              via the WebRTC data channel as raw binary data, which is converted
-              using an ArrayBuffer.
-            </p>
-          </div>
-        </div>
-      </div>
+      </TracingBeam>
     </section>
   );
-};
+}
+
+const projectContent = [
+  {
+    title: "Collabard",
+    description: (
+      <>
+        <ol className="list-decimal ml-6 space-y-1">
+          <li>
+            Implementation of Stream SDK for robust video call that handle up to
+            25 individuals simultaneously.
+          </li>
+          <li>
+            Protected against XSS and SQL injection attacks, ensuring a secure
+            user experience.
+          </li>
+          <li>
+            Secure and user-friendly authentication flow using NextAuth-v5 and
+            OAuth.
+          </li>
+          <li>Efficient data handling with PostgreSQL and Prisma ORM.</li>
+          <li>
+            High-quality, thoroughly tested codebase using Jest and React
+            Testing Library.
+          </li>
+          <li>
+            Docker integration for streamlined deployment and scalability.
+          </li>
+        </ol>
+      </>
+    ),
+    badges: [
+      {
+        title: "Live",
+        link: "https://collabard.vercel.app/",
+      },
+      {
+        title: "Github",
+        link: "https://github.com/M1-salman/collabard.git",
+      },
+    ],
+    image: "/img/collabard.png",
+  },
+  {
+    title: "Built a Ecommerce platform",
+    description: (
+      <>
+        <ol className="list-decimal ml-6 space-y-1">
+          <li>
+            Streamlined product management using Sanity CMS, making updates and
+            modifications effortless.
+          </li>
+          <li>
+            Credential-based authentication through MongoDB and Google SignIn
+            with OAuth 2.0 using NextAuth.
+          </li>
+          <li>
+            An efficient &nbsp;&quot;Add to Cart&quot;&nbsp; feature utilizing
+            Redux Toolkit for seamless user experience.
+          </li>
+          <li>
+            A contact page that securely transmitted data to a MongoDB database.
+          </li>
+        </ol>
+      </>
+    ),
+    badges: [
+      {
+        title: "Live",
+        link: "https://ecommerce-m1-salman.vercel.app/",
+      },
+      {
+        title: "Github",
+        link: "https://github.com/M1-salman/Ecommerce.git",
+      },
+    ],
+    image: "/img/ecommerce.png",
+  },
+  {
+    title: "File sharing in raw binary data",
+    description: (
+      <>
+        <ol className="list-decimal ml-6 space-y-1">
+          <li>
+            Implemented socket for signalling to create a WebRTC connection.
+          </li>
+          <li>
+            Established a socket connection using the useMemo hook to improve
+            performance.
+          </li>
+          <li>
+            Automatic negotiation between each of them is done by clicking the
+            only connect button.
+          </li>
+          <li>
+            The selected file is transmitted via the WebRTC data channel as raw
+            binary data, which is converted using an ArrayBuffer.
+          </li>
+        </ol>
+      </>
+    ),
+    badges: [
+      {
+        title: "Github",
+        link: "https://github.com/M1-salman/WebRTC-FileTransfer.git",
+      },
+    ],
+    image: "/img/file-sharing.png",
+  },
+];
 
 export default Project;
