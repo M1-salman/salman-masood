@@ -5,7 +5,7 @@ import { TracingBeam } from "../ui/tracing-beam";
 
 export function Project() {
   return (
-    <section className="max-w-full" id="projects">
+    <section className="max-w-full overflow-y-hidden" id="projects">
       <h1 className="text-3xl sm:text-5xl text-center mb-12 leading-[6rem]">
         Projects
       </h1>
