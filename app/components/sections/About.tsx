@@ -60,9 +60,14 @@ const About = () => {
               </h2>
             </div>
             <p className="text-[0.8rem] leading-[1.5rem] font-brooklyn w-[20rem] sm:w-[35rem] para-text-reveal">
-              Exploring new technologies and applying them to projects and
-              building scalable experiences for the web.Looking forward to build
-              together!
+              Currently pursuing BCA from M.C.R.P. Bhopal and also focusing on
+              learning new technologies. I have built trending web app projects
+              using React, Next, Typescript, TaiwlindCSS, Redux, Nodejs,
+              PostgreSQL, Docker etc. And also great understanding of system
+              design (low and high level) like microservices, monolith
+              architectures, rate limiting, load balancing, etc., and design
+              patterns like creational, structural, and behavioral. Looking
+              forward to build together!
             </p>
           </div>
           <div className="w-[6rem] h-[5.5rem] sm:w-[9.5rem] sm:h-[8.5rem] md:h-auto flex justify-center items-center mb-6 md:mb-0">
@@ -76,7 +81,7 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between lg:items-end h-3/6 md:h-4/6 px-6 sm:px-12 md:px-20 lg:px-28">
+        <div className="flex flex-col lg:flex-row justify-between lg:items-end h-2/6 md:h-3/6 px-6 sm:px-12 md:px-20 lg:px-28">
           <div className="overflow-hidden relative text-reveal-x mt-6 lg:mt-0">
             <div className="flex text-reveal-y">
               <a href="https://github.com/M1-salman" target="_blank">
