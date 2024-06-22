@@ -108,6 +108,12 @@ const frontend = [
     skill: "Javascript",
   },
   {
+    image: "/img/logos/typescript.svg",
+    alt: "ts-logo",
+    custom_style: "w-5 rounded",
+    skill: "Typescript",
+  },
+  {
     image: "/img/logos/react.svg",
     alt: "react-logo",
     skill: "ReactJs",
@@ -197,6 +203,11 @@ const backend = [
     alt: "postgresql-logo",
     custom_style: "w-5",
     skill: "PostgreSQL",
+  },
+  {
+    image: "/img/logos/prisma.svg",
+    alt: "prisma-logo",
+    skill: "Prisma",
   },
   {
     image: "/img/logos/supabase.svg",
