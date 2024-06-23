@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://collabard.vercel.app"),
+  metadataBase: new URL("https://salman-masood.vercel.app"),
   title: "salman_code",
   description: "Salman masood, a full stack developer",
 };
