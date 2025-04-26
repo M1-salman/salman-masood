@@ -6,10 +6,12 @@ import x from "@/public/svg/x.svg";
 
 const Footer = () => {
   return (
+
+
     <footer className="px-6 sm:px-12 md:px-20 lg:px-28 pt-28 pb-16">
       <span className="h-[0.5px] w-full bg-white inline-block"></span>
       <div className="flex flex-col items-center lg:flex-row lg:justify-between mt-16">
-        <div className="font-brooklyn">copyright@salmanmasood2023</div>
+        <div className="font-brooklyn">copyright@salmanmasood {new Date().getFullYear()}</div>
         <div className="flex my-8 lg:my-0">
           <a href="https://github.com/M1-salman" target="_blank">
             <Image

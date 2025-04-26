@@ -63,11 +63,8 @@ const About = () => {
               Currently pursuing BCA from M.C.R.P. Bhopal and also focusing on
               learning new technologies. I have built trending web app projects
               using React, Next, Typescript, TaiwlindCSS, Redux, Nodejs,
-              PostgreSQL, Docker etc. And also great understanding of system
-              design (low and high level) like microservices, monolith
-              architectures, rate limiting, load balancing, etc., and design
-              patterns like creational, structural, and behavioral. Looking
-              forward to build together!
+              PostgreSQL, Docker etc. And also good understanding of system
+              design. Looking forward to build together!
             </p>
           </div>
           <div className="w-[6rem] h-[5.5rem] sm:w-[9.5rem] sm:h-[8.5rem] md:h-auto flex justify-center items-center mb-6 md:mb-0">
