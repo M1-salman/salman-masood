@@ -90,6 +90,37 @@ const projectContent = [
     image: "/img/collabard.png",
   },
   {
+    title: "Tenent",
+    description: (
+      <>
+        <ol className="list-decimal ml-6 space-y-1">
+          <li>
+            Create and manage tenant profiles and Edit/Delete tenant info
+            anytime.
+          </li>
+          <li>Generate and view monthly bills.</li>
+          <li>Export tenant data as PDF (row/column format).</li>
+          <li>View billing history in one place.</li>
+          <li>Upload profile pictures (handled via Cloudinary + Multer).</li>
+          <li>Admin Panel (only for me) to monitor all registered users.</li>
+          <li>Dashboard to view manage tenants and quick insights.</li>
+          <li>Fully validated data using Zod (frontend) and VineJS (backend).</li>
+        </ol>
+      </>
+    ),
+    badges: [
+      {
+        title: "Live",
+        link: "https://tenent.vercel.app/",
+      },
+      {
+        title: "Github",
+        link: "https://github.com/M1-salman/tenent",
+      },
+    ],
+    image: "/img/tenent.png",
+  },
+  {
     title: "Built a Ecommerce platform",
     description: (
       <>
@@ -123,37 +154,6 @@ const projectContent = [
       },
     ],
     image: "/img/ecommerce.png",
-  },
-  {
-    title: "File sharing in raw binary data",
-    description: (
-      <>
-        <ol className="list-decimal ml-6 space-y-1">
-          <li>
-            Implemented socket for signalling to create a WebRTC connection.
-          </li>
-          <li>
-            Established a socket connection using the useMemo hook to improve
-            performance.
-          </li>
-          <li>
-            Automatic negotiation between each of them is done by clicking the
-            only connect button.
-          </li>
-          <li>
-            The selected file is transmitted via the WebRTC data channel as raw
-            binary data, which is converted using an ArrayBuffer.
-          </li>
-        </ol>
-      </>
-    ),
-    badges: [
-      {
-        title: "Github",
-        link: "https://github.com/M1-salman/WebRTC-FileTransfer.git",
-      },
-    ],
-    image: "/img/file-sharing.png",
   },
 ];
 

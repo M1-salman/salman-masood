@@ -174,6 +174,12 @@ const backend = [
     skill: "Express Js",
   },
   {
+    image: "/img/logos/vinejs.png",
+    alt: "vinejs-logo",
+    custom_style: "w-5",
+    skill: "VineJS",
+  },
+  {
     image: "/img/logos/ejs.svg",
     alt: "ejs-logo",
     custom_style: "w-6",
@@ -216,10 +222,25 @@ const backend = [
     skill: "Supabase",
   },
   {
+    image: "/img/logos/cloudinary.jpg",
+    alt: "cloudinary-logo",
+    custom_style: "w-5",
+    skill: "Cloudinary",
+  },
+  {
+    skill: "Multer",
+  },
+  {
     image: "/img/logos/docker.svg",
     alt: "docker-logo",
     custom_style: "w-5",
     skill: "Docker",
+  },
+  {
+    image: "/img/logos/aws.png",
+    alt: "aws-logo",
+    custom_style: "w-8",
+    skill: "AWS",
   },
   {
     skill: "SEO",
