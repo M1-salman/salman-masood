@@ -254,6 +254,11 @@ const tools = [
     skill: "VS Code",
   },
   {
+    image: "/img/logos/figma.png",
+    alt: "figma-logo",
+    skill: "Figma",
+  },
+  {
     image: "/img/logos/git.svg",
     alt: "git-logo",
     skill: "Git",
