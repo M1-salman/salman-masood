@@ -104,7 +104,9 @@ const projectContent = [
           <li>Upload profile pictures (handled via Cloudinary + Multer).</li>
           <li>Admin Panel (only for me) to monitor all registered users.</li>
           <li>Dashboard to view manage tenants and quick insights.</li>
-          <li>Fully validated data using Zod (frontend) and VineJS (backend).</li>
+          <li>
+            Fully validated data using Zod (frontend) and VineJS (backend).
+          </li>
         </ol>
       </>
     ),
@@ -121,24 +123,31 @@ const projectContent = [
     image: "/img/tenent.png",
   },
   {
-    title: "Built a Ecommerce platform",
+    title: "Colour Trade Pro",
     description: (
       <>
         <ol className="list-decimal ml-6 space-y-1">
+          <li>A 60-second global timer synced across all users.</li>
           <li>
-            Streamlined product management using Sanity CMS, making updates and
-            modifications effortless.
+            Users can trade once per round, with all trades processed when the timer ends.
           </li>
           <li>
-            Credential-based authentication through MongoDB and Google SignIn
-            with OAuth 2.0 using NextAuth.
+            Choose a colour (Red, Green, Violet) and a number (0-9), place a
+            trade, and also later you can view your trade history on the
+            trade-history page.
           </li>
           <li>
-            An efficient &nbsp;&quot;Add to Cart&quot;&nbsp; feature utilizing
-            Redux Toolkit for seamless user experience.
+            Fully functional wallet system with deposit, withdrawal (to bank),
+            and one bank account you can link.
+          </li>
+          <li>Profile management with image upload via Cloudinary.</li>
+          <li>
+            Influenced outcomes using a house-edge algorithm (scam logic
+            simulation).
           </li>
           <li>
-            A contact page that securely transmitted data to a MongoDB database.
+            A full Admin Dashboard where the admin can view all user data and
+            block wallets.
           </li>
         </ol>
       </>
@@ -146,14 +155,14 @@ const projectContent = [
     badges: [
       {
         title: "Live",
-        link: "https://ecommerce-m1-salman.vercel.app/",
+        link: "https://colour-trade-pro.vercel.app/",
       },
       {
         title: "Github",
-        link: "https://github.com/M1-salman/Ecommerce.git",
+        link: "https://github.com/M1-salman/colour-trade-pro",
       },
     ],
-    image: "/img/ecommerce.png",
+    image: "/img/trade.png",
   },
 ];
 
