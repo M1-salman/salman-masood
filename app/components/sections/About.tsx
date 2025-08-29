@@ -60,11 +60,12 @@ const About = () => {
               </h2>
             </div>
             <p className="text-[0.8rem] leading-[1.5rem] font-brooklyn w-[20rem] sm:w-[35rem] para-text-reveal">
-              Currently pursuing BCA from M.C.R.P. Bhopal and also focusing on
-              learning new technologies. I have built trending web app projects
-              using React, Next, Typescript, TaiwlindCSS, Redux, Nodejs,
-              PostgreSQL, AWS, Docker etc. And also good understanding of system
-              design. Looking forward to build together!
+              Pursuing MCA from AKTU, Lucknow and completed BCA from M.C.R.P.U.
+              Bhopal. I love building products—turning ideas into real, working
+              apps. From React, Next.js, TypeScript, TailwindCSS, Redux to
+              Node.js, PostgreSQL, AWS, and Docker, I've built modern web apps
+              and gained strong development skills. Always excited to keep
+              building and learning new technologies.
             </p>
           </div>
           <div className="w-[6rem] h-[5.5rem] sm:w-[9.5rem] sm:h-[8.5rem] md:h-auto flex justify-center items-center mb-6 md:mb-0">
