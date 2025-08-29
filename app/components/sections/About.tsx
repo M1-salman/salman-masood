@@ -63,7 +63,7 @@ const About = () => {
               Pursuing MCA from AKTU, Lucknow and completed BCA from M.C.R.P.U.
               Bhopal. I love building products—turning ideas into real, working
               apps. From React, Next.js, TypeScript, TailwindCSS, Redux to
-              Node.js, PostgreSQL, AWS, and Docker, I've built modern web apps
+              Node.js, PostgreSQL, AWS, and Docker, I&apos;ve built modern web apps
               and gained strong development skills. Always excited to keep
               building and learning new technologies.
             </p>
