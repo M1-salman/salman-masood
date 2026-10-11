@@ -1,7 +1,7 @@
 import Image from "next/image";
 import github from "@/public/svg/github.svg";
-import linkedin from "@/public/svg/instagram.svg";
-import instagram from "@/public/svg/linkedin.svg";
+import instagram from "@/public/svg/instagram.svg";
+import linkedin from "@/public/svg/linkedin.svg";
 import x from "@/public/svg/x.svg";
 
 const Footer = () => {
@@ -22,13 +22,13 @@ const Footer = () => {
               alt="github svg not found"
             />
           </a>
-          <a href="https://www.instagram.com/realsalmanmasood/" target="_blank">
+          <a href="https://www.instagram.com/codesalmanmasood/" target="_blank">
             <Image
-              src={linkedin}
+              src={instagram}
               width={23}
               height={23}
               className="invert pt-[1px] mr-10"
-              alt="github svg not found"
+              alt="instagram svg not found"
             />
           </a>
           <a
@@ -36,11 +36,11 @@ const Footer = () => {
             target="_blank"
           >
             <Image
-              src={instagram}
+              src={linkedin}
               width={25}
               height={25}
               className="invert mr-10"
-              alt="github svg not found"
+              alt="linkedin svg not found"
             />
           </a>
           <a href="https://twitter.com/salman_code" target="_blank">
@@ -49,7 +49,7 @@ const Footer = () => {
               width={16}
               height={16}
               className="invert mt-1"
-              alt="github svg not found"
+              alt="twitter svg not found"
             />
           </a>
         </div>
