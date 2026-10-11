@@ -290,4 +290,20 @@ const tools = [
     custom_style: "w-5",
     skill: "React - testing - library",
   },
+  {
+    image: "/img/logos/chatgpt.png",
+    alt: "chatgpt-logo",
+    custom_style: "invert",
+    skill: "Chatgpt",
+  },
+  {
+    image: "/img/logos/codex.png",
+    alt: "codex-logo",
+    skill: "Codex",
+  },
+  {
+    image: "/img/logos/claude.png",
+    alt: "claude-logo",
+    skill: "Claude",
+  },
 ];

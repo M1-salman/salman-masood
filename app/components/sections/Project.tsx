@@ -120,7 +120,7 @@ const projectContent = [
         link: "https://github.com/M1-salman/tenent",
       },
     ],
-    image: "/img/tenent.png",
+    image: "/img/tenent-2.png",
   },
   {
     title: "Colour Trade Pro",
